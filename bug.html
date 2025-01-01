@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Uncommon HTML Bug</title>
+</head>
+<body>
+  <div id="myDiv">
+    This text should be visible.
+  </div>
+
+  <script>
+    // Incorrectly setting innerHTML on an element that hasn't been fully parsed yet.
+    document.getElementById("myDiv").innerHTML = "<p>This text replaces the original text.</p><img src='nonExistentImage.jpg' alt='image'>"; 
+  </script>
+</body>
+</html>
